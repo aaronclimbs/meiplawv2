@@ -26,6 +26,8 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      meipLightBlue: "#3B8CA9",
+      meipDarkBlue: "#207DA1"
     },
     spacing: {
       px: '1px',

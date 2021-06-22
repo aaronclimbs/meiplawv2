@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import Head from "next/head";
 import Hero from "./Hero";
+import Footer from "./Footer"
 
 const Layout = ({ children }) => {
     return (
@@ -11,9 +12,9 @@ const Layout = ({ children }) => {
             </Head>
             <Navbar />
             <Hero>{children}</Hero>
-            <footer className="">
+            <Footer className="">
                 <p>&#169; 2015-{new Date().getFullYear()}</p>
-            </footer>
+            </Footer>
         </div>
     );
 };

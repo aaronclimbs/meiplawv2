@@ -1,7 +1,5 @@
-import react from "react";
-
 const Footer = ({ children }) => {
-  return <footer>{children}</footer>;
+  return <footer className="text-center bg-">{children}</footer>;
 };
 
-export default Layout;
+export default Footer;
