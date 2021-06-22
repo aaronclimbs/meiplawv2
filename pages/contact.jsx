@@ -1,11 +1,11 @@
 import Layout from "../components/Layout";
 
-const News = () => {
+const contact = () => {
     return (
         <Layout>
-            <h1>News</h1>
+            <h1 className="text-2xl">Contact us!</h1>
         </Layout>
     );
 };
 
-export default News;
+export default contact;

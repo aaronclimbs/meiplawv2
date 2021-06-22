@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Head from "next/head";
+import Hero from "./Hero";
 
 const Layout = ({ children }) => {
     return (
@@ -9,7 +10,7 @@ const Layout = ({ children }) => {
                 <link rel="icon" href="/favicon.jpg" />
             </Head>
             <Navbar />
-            <main>{children}</main>
+            <Hero>{children}</Hero>
             <footer className="">
                 <p>&#169; 2015-{new Date().getFullYear()}</p>
             </footer>
