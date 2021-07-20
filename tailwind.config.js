@@ -15,7 +15,6 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -27,7 +26,8 @@ module.exports = {
       purple: colors.violet,
       pink: colors.pink,
       meipLightBlue: "#3B8CA9",
-      meipDarkBlue: "#207DA1"
+      meipDarkBlue: "#207DA1",
+      meipBgGray: "#374C54"
     },
     spacing: {
       px: '1px',

@@ -1,17 +1,32 @@
-import Link from "next/link";
-import { useState } from "react";
-import Image from "next/image";
+import Link from 'next/link';
+import { useState } from 'react';
+import Image from 'next/image';
 
 const Navbar = () => {
-  const [active, setActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
   const handleClick = () => {
-    setActive(!active);
+    setIsActive(!isActive);
   };
   return (
-    <nav className="flex flex-wrap items-center p-2 border-b">
+    <nav className="flex items-center p-2 border-b">
       <Link href="/">
-        <a className="inline-flex items-center p-2 mr-4 ">
-          <Image src="/MaddoxEdwards_PRIMARY.svg" width={426} height={89.1} />
+        <a className="p-2 mr-4 hidden md:inline-flex flex-shrink">
+          <Image
+            src="/assets/ME_PRIMARY_WEB [2913x609].jpg"
+            className=""
+            width={426}
+            height={89.1}
+          />
+        </a>
+      </Link>
+      <Link href="/">
+        <a className="p-2 mr-4 inline-flex md:hidden">
+          <Image
+            src="/assets/ME_ELEMENT_WEB [521x562].jpg"
+            width={89.1}
+            height={89.1}
+          />
         </a>
       </Link>
       <button
@@ -35,13 +50,13 @@ const Navbar = () => {
       </button>
       <div
         className={`${
-          active ? "hidden" : ""
+          !isActive ? 'hidden' : ''
         } w-full lg:inline-flex lg:flex-grow lg:w-auto`}
       >
         <div className="flex flex-col items-start lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto lg:items-center lg:h-auto">
           <Link href="/team">
             <a className="text-2xl uppercase justify-center w-full px-3 py-2 font-bold text-blue-600 rounded lg:inline-flex lg:w-auto hover:text-white hover:bg-blue-600 n-600">
-              Meet our team
+              Team
             </a>
           </Link>
           <Link href="/about">

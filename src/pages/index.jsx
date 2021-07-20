@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 export default function Home() {
   return (
     <Layout>
-      <div className="">
+ <div className="">
         <main className="">
           <h1 className="text-2xl">Maddox Edwards PLLC</h1>
 
