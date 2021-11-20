@@ -1,62 +1,5 @@
 const data = {
   partners: {
-    ason: {
-      name: "Anthony Son",
-      experience: `
-      Anthony H. Son is a seasoned litigator and counselor with a diverse group of clients from pharmaceuticals, medical devices, semiconductors, electronics, software, and financial services industries. 
-      Anthony has represented clients before the United States Supreme Court, the United States Court of Appeals for the Federal Circuit, various United States District Courts throughout the United States, and in Inter Partes Review and Covered Business Method Review proceedings before the U.S. Patent and Trademark Office.
-      In particular, Anthony has special expertise in enforcing and monetizing patents for companies and inventors, and in designing creative alternative fee arrangements to more closely align the interests of client and counsel in results.
-      Mr. Son has been named to Super Lawyers’ from 2014 through 2018.
-    `,
-      email: "ason@meiplaw.com",
-      phone: {
-        direct: 2028300707,
-        fax: 2028300704,
-      },
-      address: {
-        street: "1900 K ST NW, Suite 725",
-        city: "Washington, DC",
-        zip: "20006",
-      },
-      education: [
-        {
-          degree: "J.D.",
-          major: "",
-          school:
-            "Yeshiva University Benjamin N. Cardozo School of Law (cum laude)",
-          year: 1997,
-        },
-        {
-          degree: "B.S.",
-          major: "Biochemistry and Molecular Biology",
-          school: "University of Maryland, Baltimore County",
-          year: 1994,
-        },
-      ],
-      barAdmissions: [
-        "California",
-        "District of Columbia",
-        "Minnesota",
-        "United States Patent and Trademark Office",
-      ],
-      courtAdmissions: [
-        "United States Supreme Court",
-        "United States Court of Appeals for the Federal Circuit",
-        "U.S. District Court for the C.D. California",
-        "U.S. District Court for the N.D. California",
-        "U.S. District Court for the S.D. California",
-        "U.S. District Court for the D. Maryland",
-        "U.S. District Court for the E.D. Michigan",
-        "U.S. District Court for the E.D. Texas",
-        "U.S. District Court for the W.D. Texas",
-        "U.S. District Court for the N.D. Texas",
-        "U.S. District Court for the W.D. Pennsylvania",
-      ],
-      imgs: {
-        small: "../public/assets/profile-anthony-son [250x333].jpg",
-        large: "../public/assets/profile-anthony-son [450x600].jpg",
-      },
-    },
     smaddox: {
       name: "Steven Maddox",
       experience: `
@@ -105,53 +48,6 @@ const data = {
       imgs: {
         small: "../public/assets/profile-steven-maddox [250x333].jpg",
         large: "../public/assets/profile-steven-maddox [450x600].jpg",
-      },
-    },
-    mruedy: {
-      name: "Matthew Ruedy",
-      experience: `
-      Mr. Ruedy focuses his practice on patent litigation, with a specific concentration in life science cases.
-      Mr. Ruedy has substantial experience in pharmaceutical patent litigation brought under the Hatch Waxman Act, including cases involving new chemical entities and formulations.
-      Mr. Ruedy has been named to Super Lawyers’ Washington, DC Rising Stars in Intellectual Property Litigation from 2017 through 2019.
-    `,
-      phone: {
-        direct: 2028300779,
-        fax: 2028300704,
-      },
-      email: "mruedy@meiplaw.com",
-      address: {
-        street: "1900 K ST NW, Suite 725",
-        city: "Washington, DC",
-        zip: "20006",
-      },
-      education: [
-        {
-          degree: "J.D.",
-          major: "",
-          school: "University of North Carolina School of Law",
-          year: 2009,
-        },
-        {
-          degree: "B.S.",
-          major: "Biochemistry and Biological Sciences (magna cum laude)",
-          school: "North Carolina State University (Phi Beta Kappa)",
-          year: 2003,
-        },
-      ],
-      barAdmissions: [
-        "New York",
-        "District of Columbia",
-        "U.S. Patent and Trademark Office",
-      ],
-      courtAdmissions: [
-        "United States Court of Appeals for the Federal Circuit",
-      ],
-      publications: [
-        `Co-author, Trial in ANDA Litigation: Strategies and Tactics for Pharmaceutical Patent Litigators, American Bar Association (Section of Intellectual Property Law), 2020`,
-      ],
-      imgs: {
-        small: "../public/assets/profile-matthew-ruedy [250x333].jpg",
-        large: "../public/assets/profile-matthew-ruedy [450x600].jpg",
       },
     },
     jedwards: {
