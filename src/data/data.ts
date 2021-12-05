@@ -1,36 +1,45 @@
-const data = {
-  partners: {
-    smaddox: {
+import { Contact, Person } from "../types";
+
+const data: {
+  partners: Person[];
+  contact: Contact;
+  cases: { pharma: string[]; other: string[] };
+} = {
+  partners: [
+    {
       name: "Steven Maddox",
-      experience: `
+      description: `
       Mr. Maddox focuses on patent litigation in life sciences technology, with special expertise in pharmaceutical Hatch Waxman cases and medical devices.
       Mr. Maddox has been recognized as a life sciences star for his litigation practice in LMG Life Sciences, published by Managing Intellectual Property.
       He has received special recognition for his work in generic drugs, biosimilars, drug formulations, large molecules and vaccines.
       Prior to entering private practice, Mr. Maddox served as a trial attorney at the United States Department of Justice.
       He clerked for The Honorable Thomas P. Griesa, former Chief Judge of the United States District Court for the Southern District of New York.
     `,
-      phone: {
-        direct: 2028300238,
-        fax: 2028300704,
-      },
-      email: "smaddox@meiplaw.com",
-      address: {
-        street: "1900 K ST NW, Suite 725",
-        city: "Washington, DC",
-        zip: "20006",
+      contact: {
+        phone: {
+          work: 2028300238,
+          fax: 2028300704,
+        },
+        email: "smaddox@meiplaw.com",
+        address: {
+          street: "1900 K ST NW, Suite 725",
+          city: "Washington",
+          state: "DC",
+          zip: "20006",
+        },
       },
       education: [
         {
           degree: "J.D.",
           major: "",
           school: "University of Virginia School of Law (Order of the Coic)",
-          year: 1989,
+          yearGraduated: 1989,
         },
         {
           degree: "A.B.",
           major: "Economics and History",
           school: "Harvard University",
-          year: 1986,
+          yearGraduated: 1986,
         },
       ],
       barAdmissions: ["District of Columbia"],
@@ -39,33 +48,55 @@ const data = {
         "United States Court of Appeals for the Federal Circuit",
       ],
       seminars: [
-        `Panelist, “The Master Class on Settling Paragraph IV Disputes: Drafting and Negotiating Strategies for Brand-Names and Generic – A Hands-On, Practical Approach,” American Conference Institute (ACI) Paragraph IV Disputes Conference, 2012`,
-        `Panelist, “Invalid or Will Not Be Infringed”: Re-Assessing the ANDA Applicant’s Pre-Litigation Considerations and Obligations Under Paragraph IV vis-à-vis Microsoft v. i4i, American Conference Institute (ACI) Paragraph IV Disputes Conference, 2011`,
+        {
+          role: "Panelist",
+          title:
+            "The Master Class on Settling Paragraph IV Disputes: Drafting and Negotiating Strategies for Brand-Names and Generic – A Hands-On, Practical Approach,” American Conference Institute (ACI) Paragraph IV Disputes Conference",
+          event:
+            "American Conference Institute (ACI) Paragraph IV Disputes Conference",
+          date: 2012,
+        },
+        {
+          role: "Panelist",
+          title:
+            "Invalid or Will Not Be Infringed”: Re-Assessing the ANDA Applicant’s Pre-Litigation Considerations and Obligations Under Paragraph IV vis-à-vis Microsoft v. i4i",
+          event:
+            "American Conference Institute (ACI) Paragraph IV Disputes Conference",
+          date: 2011,
+        },
       ],
       publications: [
-        `Co-author, Trial in ANDA Litigation: Strategies and Tactics for Pharmaceutical Patent Litigators, American Bar Association (Section of Intellectual Property Law), 2020`,
+        {
+          role: "Co-Author",
+          title:
+            "Co-author, Trial in ANDA Litigation: Strategies and Tactics for Pharmaceutical Patent Litigators, American Bar Association (Section of Intellectual Property Law)",
+          date: 2020,
+        },
       ],
-      imgs: {
+      assets: {
         small: "../public/assets/profile-steven-maddox [250x333].jpg",
         large: "../public/assets/profile-steven-maddox [450x600].jpg",
       },
     },
-    jedwards: {
+    {
       name: "Jeremy Edwards",
-      experience: `
+      description: `
       Mr. Edwards has substantial experience representing parties in patent litigation spanning a variety of fields, from biotechnology to optics.
       In particular, Mr. Edwards has extensive experience representing clients in pharmaceutical patent litigation brought under the Hatch Waxman Act.
       Mr. Edwards has been named to Super Lawyers’ Washington, DC Rising Stars in Intellectual Property Litigation from 2014 through 2018.
     `,
-      phone: {
-        direct: 2028300540,
-        fax: 2028300704,
-      },
-      email: "jedwards@meiplaw.com",
-      address: {
-        street: "1900 K ST NW, Suite 725",
-        city: "Washington, DC",
-        zip: "20006",
+      contact: {
+        phone: {
+          work: 2028300540,
+          fax: 2028300704,
+        },
+        email: "jedwards@meiplaw.com",
+        address: {
+          street: "1900 K ST NW, Suite 725",
+          city: "Washington",
+          state: "DC",
+          zip: "20006",
+        },
       },
       education: [
         {
@@ -73,14 +104,14 @@ const data = {
           major: "",
           school:
             "University of Maryland School of Law (summa cum laude) (Moot Court)",
-          year: 2005,
+          yearGraduated: 2005,
         },
         {
           degree: "B.S.",
           major: "Biology",
           school:
             "University of Maryland (University and Departmental Honors) (Phi Beta Kappa)",
-          year: 2000,
+          yearGraduated: 2000,
         },
       ],
       barAdmissions: [
@@ -94,28 +125,36 @@ const data = {
         "U.S. District Court for the District of Maryland",
       ],
       publications: [
-        `Co-author, Trial in ANDA Litigation: Strategies and Tactics for Pharmaceutical Patent Litigators, American Bar Association (Section of Intellectual Property Law), 2020`,
+        {
+          role: "Co-Author",
+          title:
+            "Co-author, Trial in ANDA Litigation: Strategies and Tactics for Pharmaceutical Patent Litigators, American Bar Association (Section of Intellectual Property Law)",
+          date: 2020,
+        },
       ],
-      imgs: {
+      assets: {
         small: "../public/assets/profile-jeremy-edwards [250x333].jpg",
         large: "../public/assets/profile-jeremy-edwards [450x600].jpg",
       },
     },
-    ksaba: {
+    {
       name: "Kaveh Saba",
-      experience: `
+      description: `
       Mr. Saba’s experience includes patent cases involving pharmaceuticals, biotechnology, consumer electronics, and microphone technologies, both in U.S. District Courts and Section 337 investigations before the U.S. International Trade Commission. Mr. Saba has substantial experience in patent litigation brought under the Hatch Waxman Act, including cases involving method of treatment and formulation patents.
       Mr. Saba has also represented pro bono individual clients in a variety of criminal and civil matters, including successfully representing a criminal defendant in a jury trial in Maryland state court and obtaining asylum for a client in an evidentiary hearing before a federal immigration judge.
     `,
-      phone: {
-        direct: 2028300212,
-        fax: 2028300704,
-      },
-      email: "ksaba@meiplaw.com",
-      address: {
-        street: "1900 K ST NW, Suite 725",
-        city: "Washington, DC",
-        zip: "20006",
+      contact: {
+        phone: {
+          work: 2028300212,
+          fax: 2028300704,
+        },
+        email: "ksaba@meiplaw.com",
+        address: {
+          street: "1900 K ST NW, Suite 725",
+          city: "Washington, DC",
+          state: "DC",
+          zip: "20006",
+        },
       },
       education: [
         {
@@ -123,13 +162,13 @@ const data = {
           major: "",
           school:
             "University of Maryland School of Law (summa cum laude) (Moot Court) (Order of the Coif)",
-          year: 2011,
+          yearGraduated: 2011,
         },
         {
           degree: "B.S.E.",
           major: "Chemical Engineering",
           school: "University of Michigan (magna cum laude)",
-          year: 2008,
+          yearGraduated: 2008,
         },
       ],
       barAdmissions: [
@@ -141,26 +180,38 @@ const data = {
         "United States Court of Appeals for the Federal Circuit",
       ],
       publications: [
-        `Co-author, Trial in ANDA Litigation: Strategies and Tactics for Pharmaceutical Patent Litigators, American Bar Association (Section of Intellectual Property Law), 2020`,
+        {
+          role: "Co-Author",
+          title:
+            "Co-author, Trial in ANDA Litigation: Strategies and Tactics for Pharmaceutical Patent Litigators, American Bar Association (Section of Intellectual Property Law)",
+          date: 2020,
+        },
       ],
       seminars: [
-        `Panelist, “Definitely, Maybe: Determining Patentable Subject Matter and the Future of Section 101,” ACI Paragraph IV Disputes Conference, April 2021`,
+        {
+          role: "Panelist",
+          title:
+            "Definitely, Maybe: Determining Patentable Subject Matter and the Future of Section 101",
+          event: "ACI Paragraph IV Disputes Conference",
+          date: "April 2021",
+        },
       ],
-      imgs: {
+      assets: {
         large: "../public/assets/profile-kaveh-saba [450x600].jpg",
         small: "../public/assets/profile-kaveh-saba [250x333].jpg",
       },
     },
-  },
+  ],
 
   contact: {
     address: {
       street: "1900 K ST NW, Suite 725",
-      city: "Washington, DC",
+      city: "Washington",
+      state: "DC",
       zip: "20006",
     },
     phone: {
-      main: 2028300707,
+      work: 2028300707,
       fax: 2028300704,
     },
   },
