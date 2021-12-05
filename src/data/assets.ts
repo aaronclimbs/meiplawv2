@@ -1,0 +1,15 @@
+export const assets: { [key: string]: string } = {
+  approach: "/assets/approach [820x460].jpg",
+  globe: "/assets/keyboard-globe [1500x590].jpg",
+  meElement: "/assets/ME_ELEMENT_WEB [521x562].jpg",
+  mePrimaryNoBg: "/assets/ME_PRIMARY_WEB [2913x609] [nobg].png",
+  mePrimary: "/assets/ME_PRIMARY_WEB [2913x609].jpg",
+  partners: "/assets/partners [820x460].jpg",
+  litigation: "/assets/patent-litigation [820x460].jpg",
+  edwardsSm: "/assets/profile-jeremy-edwards [250x333].jpg",
+  edwardsLg: "/assets/profile-jeremy-edwards [450x600].jpg",
+  sabaSm: "/assets/profile-kaveh-saba [250x333].jpg",
+  sabaLg: "/assets/profile-kaveh-saba [450x600].jpg",
+  maddoxSm: "/assets/profile-steven-maddox [250x333].jpg",
+  maddoxLg: "/assets/profile-steven-maddox [450x600].jpg",
+};
